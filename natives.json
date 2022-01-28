@@ -368,20 +368,20 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "ScrHandle",
+					"name": "handle"
 				}
 			],
 			"return_type": "Entity",
 			"build": "1207"
 		},
 		"0xC276FE69DDA22BAD": {
-			"name": "_0xC276FE69DDA22BAD",
+			"name": "_DOES_COVER_POINT_EXIST",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "ScrHandle",
+					"name": "handle"
 				}
 			],
 			"return_type": "BOOL",
@@ -862,15 +862,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Entity",
+					"name": "transportEntity"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -2267,8 +2267,8 @@
 			"build": "1207"
 		},
 		"0xB727A847862CB00A": {
-			"name": "_REQUEST_MGM_ASSETS",
-			"comment": "Poker\nPokerArthur\nPokerArthurCamp\nPokerJohn\nPokerJohnCamp",
+			"name": "_LOAD_MGM_ASSETS",
+			"comment": "Used to request MiniGameMoments Assets.\n\nmgmFilename's:\nPoker\nPokerArthur\nPokerArthurCamp\nPokerJohn\nPokerJohnCamp",
 			"params": [
 				{
 					"type": "const char*",
@@ -2973,36 +2973,36 @@
 			"build": "1207"
 		},
 		"0xA4D3A1C008F250DF": {
-			"name": "_SET_CORE_ICON",
-			"comment": "",
+			"name": "_SET_STATUS_EFFECT_CORE_ICON",
+			"comment": "Displays status effects on core icons (includes warnings).\n\nenum eUiRpgStatusEffect\n{\n\tSTATUS_NONE,\n\tSTATUS_COLD,\n\tSTATUS_HOT,\n\tSTATUS_OVERFED,\n\tSTATUS_DIRTY,\n\tSTATUS_SNAKE_VENOM,\n\tSTATUS_ARROW_WOUNDED,\n\tSTATUS_ARROW_DRAINED,\n\tSTATUS_ARROW_DISORIENTED,\n\tSTATUS_ARROW_TRACKED,\n\tSTATUS_ARROW_CONFUSION,\n\tSTATUS_UNDERWEIGHT,\n\tSTATUS_OVERWEIGHT,\n\tSTATUS_SICK_1,\n\tSTATUS_SICK_2,\n\tSTATUS_PREDATOR_INVULNERABLE\n};",
 			"params": [
 				{
 					"type": "int",
-					"name": "type"
+					"name": "statusEffectType"
 				}
 			],
 			"return_type": "void",
 			"build": "1207"
 		},
 		"0xFB6E111908502871": {
-			"name": "_START_PERIODIC_ICON",
-			"comment": "",
+			"name": "_SET_STATUS_EFFECT_PERIODIC_ICON",
+			"comment": "Starts core periodic icon.\nstatusEffectType: see 0xA4D3A1C008F250DF",
 			"params": [
 				{
 					"type": "int",
-					"name": "type"
+					"name": "statusEffectType"
 				}
 			],
 			"return_type": "void",
 			"build": "1207"
 		},
 		"0x3FC4C027FD0936F4": {
-			"name": "_STOP_PERIODIC_ICON",
-			"comment": "",
+			"name": "_STOP_STATUS_EFFECT_PERIODIC_ICON",
+			"comment": "Stops periodic icon.\nstatusEffectType: see 0xA4D3A1C008F250DF",
 			"params": [
 				{
 					"type": "int",
-					"name": "type"
+					"name": "statusEffectType"
 				}
 			],
 			"return_type": "void",
@@ -3302,7 +3302,7 @@
 		},
 		"0xD0730C1FA40348D9": {
 			"name": "_0xD0730C1FA40348D9",
-			"comment": "",
+			"comment": "_IS_SCRIPTED_CONVERSATION_*",
 			"params": [
 				{
 					"type": "Any",
@@ -3379,7 +3379,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				},
 				{
@@ -3950,28 +3950,28 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "soundId"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "const char*",
+					"name": "soundName"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "const char*",
+					"name": "soundsetName"
 				},
 				{
 					"type": "Any",
@@ -3982,7 +3982,7 @@
 					"name": "p7"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p8"
 				}
 			],
@@ -4266,15 +4266,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -4543,8 +4543,8 @@
 			"build": "1207"
 		},
 		"0x49B99BF3FDA89A7A": {
-			"name": "_CAN_PED_SPEAK",
-			"comment": "",
+			"name": "DOES_CONTEXT_EXIST_FOR_THIS_PED",
+			"comment": "Checks if the ped can play the speech or has the speech file, last parameter is usually false.",
 			"params": [
 				{
 					"type": "Ped",
@@ -4883,20 +4883,20 @@
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "BOOL",
+					"name": "isSrlLoaded"
 				},
 				{
 					"type": "Any",
@@ -5964,7 +5964,7 @@
 		},
 		"0x706D57B0F50DA710": {
 			"name": "TRIGGER_MUSIC_EVENT",
-			"comment": "",
+			"comment": "https://github.com/femga/rdr3_discoveries/blob/master/audio/music_events/music_events.lua",
 			"params": [
 				{
 					"type": "const char*",
@@ -6061,8 +6061,8 @@
 			"gta_jhash": ""
 		},
 		"0x062D5EAD4DA2FA6A": {
-			"name": "_0x062D5EAD4DA2FA6A",
-			"comment": "FORCE_*",
+			"name": "FORCE_PED_PANIC_WALLA",
+			"comment": "",
 			"params": [],
 			"return_type": "void",
 			"build": "1207",
@@ -6915,7 +6915,7 @@
 		},
 		"0x86EC5F83867C4B70": {
 			"name": "_0x86EC5F83867C4B70",
-			"comment": "",
+			"comment": "_BOUNTY_C* or _BOUNTY_GET_*",
 			"params": [
 				{
 					"type": "Any*",
@@ -6934,7 +6934,7 @@
 					"name": "p0"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0xB096547D61868254": {
@@ -6951,7 +6951,7 @@
 		},
 		"0x27D3A0E1FE090A43": {
 			"name": "_0x27D3A0E1FE090A43",
-			"comment": "",
+			"comment": "_BOUNTY_IS_* or _BOUNTY_REQUEST_*",
 			"params": [
 				{
 					"type": "Any*",
@@ -7341,27 +7341,27 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "BOOL",
+					"name": "render"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "distance"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "blendBackSmoothingType"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p5"
 				}
 			],
@@ -8485,7 +8485,7 @@
 		},
 		"0x69D65E89FFD72313": {
 			"name": "_REQUEST_LETTER_BOX_NOW",
-			"comment": "Creates Cinematic Black Bars\nDisable instantly: false/false, Enable instantly: true/true",
+			"comment": "Creates Cinematic Black Bars (at top and bottom)\nDisable instantly: false/false, Enable instantly: true/true",
 			"params": [
 				{
 					"type": "BOOL",
@@ -8837,8 +8837,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -9100,7 +9100,7 @@
 			"params": [
 				{
 					"type": "Vehicle",
-					"name": "p0"
+					"name": "vehicle"
 				},
 				{
 					"type": "int",
@@ -12836,7 +12836,7 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p0"
 				}
 			],
@@ -12848,11 +12848,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -12864,11 +12864,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -12880,11 +12880,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -12900,7 +12900,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -12909,18 +12909,18 @@
 		},
 		"0xEB4F9A3537EEABCD": {
 			"name": "_DATABINDING_ADD_DATA_CONTAINER",
-			"comment": "",
+			"comment": "Returns entryId Hash",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "Hash",
 			"build": "1207"
 		},
 		"0x37BB86A751148A6A": {
@@ -12928,15 +12928,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -12952,11 +12952,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -12972,11 +12972,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -12992,11 +12992,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -13012,11 +13012,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				}
 			],
@@ -13032,11 +13032,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p2"
 				}
 			],
@@ -13052,7 +13052,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
@@ -13072,11 +13072,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				}
 			],
@@ -13112,11 +13112,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				}
 			],
@@ -13132,11 +13132,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				}
 			],
@@ -13152,19 +13152,19 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
 					"type": "Any",
-					"name": "p2"
+					"name": "gangId"
 				}
 			],
 			"return_type": "Any",
 			"build": "1207"
 		},
 		"0x7D0F2014DB28DD01": {
-			"name": "_0x7D0F2014DB28DD01",
+			"name": "_DATABINDING_ADD_DATA_POSSE_ID",
 			"comment": "",
 			"params": [
 				{
@@ -13172,12 +13172,12 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
 					"type": "Any",
-					"name": "p2"
+					"name": "posseId"
 				}
 			],
 			"return_type": "Any",
@@ -13192,7 +13192,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
@@ -13208,11 +13208,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13228,7 +13228,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -13244,7 +13244,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13260,11 +13260,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				},
 				{
@@ -13284,11 +13284,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				},
 				{
@@ -13312,7 +13312,7 @@
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				},
 				{
@@ -13328,12 +13328,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				}
 			],
 			"return_type": "void",
@@ -13348,8 +13348,8 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
 			"return_type": "void",
@@ -13360,8 +13360,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
 			"return_type": "void",
@@ -13376,8 +13376,8 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				}
 			],
 			"return_type": "Any",
@@ -13392,7 +13392,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -13408,11 +13408,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				}
 			],
@@ -13428,7 +13428,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13444,7 +13444,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13460,7 +13460,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13476,11 +13476,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -13496,11 +13496,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -13516,11 +13516,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -13532,11 +13532,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -13552,7 +13552,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -13564,8 +13564,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
 			"return_type": "void",
@@ -13576,8 +13576,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
 			"return_type": "Any",
@@ -13588,11 +13588,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
@@ -13613,7 +13613,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -13629,11 +13629,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -13642,14 +13642,14 @@
 		},
 		"0xBFC83DA249BEFCC9": {
 			"name": "_0xBFC83DA249BEFCC9",
-			"comment": "",
+			"comment": "_DATABINDING_WRITE_DATA_*",
 			"params": [
 				{
 					"type": "Any",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
@@ -13669,7 +13669,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -13685,11 +13685,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -13705,7 +13705,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
@@ -13725,7 +13725,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p1"
 				}
 			],
@@ -13734,18 +13734,18 @@
 		},
 		"0x05AC9E1E02975AFB": {
 			"name": "_0x05AC9E1E02975AFB",
-			"comment": "",
+			"comment": "_DATABINDING_WRITE_DATA_*",
 			"params": [
 				{
 					"type": "Any",
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p2"
 				}
 			],
@@ -13761,7 +13761,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -13777,11 +13777,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				}
 			],
@@ -13797,7 +13797,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
@@ -13817,7 +13817,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13833,11 +13833,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				}
 			],
@@ -13845,7 +13845,7 @@
 			"build": "1207"
 		},
 		"0xA3BD6FF95E713EE5": {
-			"name": "_0xA3BD6FF95E713EE5",
+			"name": "_DATABINDING_WRITE_STRING_FROM_HASH",
 			"comment": "",
 			"params": [
 				{
@@ -13853,11 +13853,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				}
 			],
@@ -13865,7 +13865,7 @@
 			"build": "1207"
 		},
 		"0xC70041408E16BE2D": {
-			"name": "_0xC70041408E16BE2D",
+			"name": "_DATABINDING_WRITE_DATA_GANG_ID",
 			"comment": "",
 			"params": [
 				{
@@ -13873,19 +13873,19 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
 					"type": "Any",
-					"name": "p2"
+					"name": "gangId"
 				}
 			],
 			"return_type": "void",
 			"build": "1207"
 		},
 		"0xC70041408E16BE2E": {
-			"name": "_0xC70041408E16BE2E",
+			"name": "_DATABINDING_WRITE_DATA_POSSE_ID",
 			"comment": "",
 			"params": [
 				{
@@ -13893,12 +13893,12 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
 					"type": "Any",
-					"name": "p2"
+					"name": "posseId"
 				}
 			],
 			"return_type": "void",
@@ -13913,8 +13913,8 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Any*",
+					"name": "gamerHandle"
 				}
 			],
 			"return_type": "void",
@@ -13941,7 +13941,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -13957,7 +13957,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -13973,7 +13973,7 @@
 					"name": "p0"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207"
 		},
 		"0xFFC566A4801F6B40": {
@@ -13985,7 +13985,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -14001,7 +14001,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -14013,11 +14013,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "float",
 			"build": "1207"
 		},
 		"0x81D7183E7A8ECA72": {
@@ -14025,11 +14025,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "Hash",
 			"build": "1207"
 		},
 		"0x9B535990B01B62DE": {
@@ -14041,7 +14041,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -14057,7 +14057,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -14085,7 +14085,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -14101,7 +14101,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p1"
 				}
 			],
@@ -14117,7 +14117,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -14133,7 +14133,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
@@ -14153,7 +14153,7 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				},
 				{
@@ -14181,8 +14181,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "entryId"
 				}
 			],
 			"return_type": "void",
@@ -14197,8 +14197,8 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "size"
 				}
 			],
 			"return_type": "void",
@@ -14213,8 +14213,8 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "interestIndex"
 				}
 			],
 			"return_type": "void",
@@ -14229,11 +14229,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p2"
 				},
 				{
@@ -19612,11 +19612,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Entity",
+					"name": "entity"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -19713,7 +19713,7 @@
 		},
 		"0x0DF7692B1D9E7BA7": {
 			"name": "SET_ENTITY_ALPHA",
-			"comment": "skin - everything alpha except skin\nSet entity alpha level. Ranging from 0 to 255 but chnages occur after every 20 percent (after every 51).",
+			"comment": "skin - everything alpha except skin\nSet entity alpha level. Ranging from 0 to 255 but changes occur after every 20 percent (after every 51).",
 			"params": [
 				{
 					"type": "Entity",
@@ -23481,7 +23481,7 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p0"
 				}
 			],
@@ -23596,7 +23596,7 @@
 			"build": "1207"
 		},
 		"0x9937FACBBF267244": {
-			"name": "_0x9937FACBBF267244",
+			"name": "_SET_DISTRICT_PHOTO_TAKEN_STAT",
 			"comment": "",
 			"params": [
 				{
@@ -23608,7 +23608,7 @@
 			"build": "1207"
 		},
 		"0x8952E857696B8A79": {
-			"name": "_0x8952E857696B8A79",
+			"name": "_SET_STATE_PHOTO_TAKEN_STAT",
 			"comment": "",
 			"params": [
 				{
@@ -23657,7 +23657,7 @@
 			"gta_jhash": "0x25D569EB"
 		},
 		"0x13430D3D5A45F14B": {
-			"name": "DRAW_LOW_QUALITY_PHOTO",
+			"name": "_GET_STATUS_OF_DRAW_LOW_QUALITY_PHOTO",
 			"comment": "",
 			"params": [
 				{
@@ -23722,9 +23722,9 @@
 		},
 		"0xB28894CD7408BD0C": {
 			"name": "GET_STATUS_OF_SORTED_LIST_OPERATION",
-			"comment": "",
+			"comment": "0 = succeeded\n1 = getting status\n2 = failed",
 			"params": [],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207",
 			"gta_hash": "0xF5BED327CEA362B1",
 			"gta_jhash": "0x596B900D"
@@ -24588,27 +24588,27 @@
 			"gta_jhash": ""
 		},
 		"0xBD3324281E8B9933": {
-			"name": "_0xBD3324281E8B9933",
-			"comment": "",
+			"name": "_ADD_VEG_MODIFIER_ZONE",
+			"comment": "Returns veg modifier handle",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "flags"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207"
 		},
 		"0xFA50F79257745E74": {
@@ -29511,7 +29511,7 @@
 			"gta_jhash": "0x68DCAE10"
 		},
 		"0xD98630CE73C61E98": {
-			"name": "_SET_MISSION_NAME_2",
+			"name": "SET_MISSION_NAME_FOR_UGC_MISSION",
 			"comment": "",
 			"params": [
 				{
@@ -30791,15 +30791,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "groupId"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				},
 				{
@@ -30982,11 +30982,11 @@
 					"name": "prompt"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -31594,8 +31594,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -31610,8 +31610,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -31622,19 +31622,19 @@
 			"build": "1207"
 		},
 		"0x0EABF182FBB63D72": {
-			"name": "_0x0EABF182FBB63D72",
-			"comment": "",
+			"name": "_INVERSE_KINEMATICS_SET_DISABLED_FOR_PED",
+			"comment": "Seems to disable IK on ped",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -31646,15 +31646,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x873C792E07A32C8B": {
@@ -31662,12 +31662,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped1"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped2"
 				}
 			],
 			"return_type": "void",
@@ -32338,16 +32338,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "inventoryId"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Any*",
+					"name": "guid"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "BOOL",
+					"name": "inUse"
 				}
 			],
 			"return_type": "void",
@@ -33158,15 +33158,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "inventoryId"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Any*",
+					"name": "guid"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -40779,16 +40779,16 @@
 			"gta_jhash": "0x854E9AB8"
 		},
 		"0x2FCD528A397E5C88": {
-			"name": "_0x2FCD528A397E5C88",
+			"name": "_CLEAR_VOLUME_AREA",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "flag"
 				}
 			],
 			"return_type": "void",
@@ -41382,7 +41382,7 @@
 			"gta_jhash": "0x6BDE5CE4"
 		},
 		"0x9578986A6105A6AD": {
-			"name": "_GET_PROJECTILE_NEAR_PED",
+			"name": "GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE",
 			"comment": "",
 			"params": [
 				{
@@ -42418,26 +42418,26 @@
 		},
 		"0x3233C4EC0514C7EC": {
 			"name": "_0x3233C4EC0514C7EC",
-			"comment": "",
+			"comment": "Only used in script function PROCESS_ZONE_CREATION\nReturns Pop multiplier volume ID",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "pedDensity"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "vehicleDensity"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p4"
 				}
 			],
@@ -42549,7 +42549,7 @@
 		},
 		"0x6BCF7B5CD338281A": {
 			"name": "_0x6BCF7B5CD338281A",
-			"comment": "",
+			"comment": "_SET_DISPATCH_*, unused",
 			"params": [
 				{
 					"type": "Any",
@@ -42603,23 +42603,23 @@
 			"gta_jhash": "0xE0C9307E"
 		},
 		"0xE4EE55E63FA9AF45": {
-			"name": "_ADD_TACTICAL_ANALYSIS_POINT",
-			"comment": "",
+			"name": "ADD_TACTICAL_NAV_MESH_POINT",
+			"comment": "Params: p3 is 0 in R* Script utopia2",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				}
 			],
@@ -42629,7 +42629,7 @@
 			"gta_jhash": "0x24A4E0B2"
 		},
 		"0xD93B6516C6878267": {
-			"name": "_CLEAR_TACTICAL_ANALYSIS_POINTS",
+			"name": "CLEAR_TACTICAL_NAV_MESH_POINTS",
 			"comment": "",
 			"params": [],
 			"return_type": "void",
@@ -42721,8 +42721,8 @@
 			"gta_jhash": "0x3301EA47"
 		},
 		"0x7ACF124C12A2B045": {
-			"name": "_REMOVE_STEALTH_KILL",
-			"comment": "Appears to remove stealth kill action from memory",
+			"name": "ACTION_MANAGER_ENABLE_ACTION",
+			"comment": "Appears to remove stealth kill action from memory (?)",
 			"params": [
 				{
 					"type": "Hash",
@@ -42730,7 +42730,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p1"
+					"name": "enable"
 				}
 			],
 			"return_type": "void",
@@ -43829,7 +43829,7 @@
 			"name": "_0x36040772DF5E59A0",
 			"comment": "",
 			"params": [],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1355"
 		},
 		"0x0358B8A41916C613": {
@@ -45772,8 +45772,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "BOOL",
+					"name": "setting"
 				}
 			],
 			"return_type": "void",
@@ -46703,20 +46703,20 @@
 			"build": "1207"
 		},
 		"0x4CACA84440FA26F6": {
-			"name": "_NETWORK_GET_DESTROYER_OF_ENTITY",
+			"name": "NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Entity",
+					"name": "entity"
 				},
 				{
-					"type": "Hash*",
-					"name": "weaponHash"
+					"type": "int*",
+					"name": "p2"
 				}
 			],
 			"return_type": "BOOL",
@@ -48010,16 +48010,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "BOOL",
+					"name": "local"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "remote"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "instanceId"
 				}
 			],
 			"return_type": "void",
@@ -49343,11 +49343,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				},
 				{
@@ -49374,16 +49374,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "originalWeight"
 				},
 				{
 					"type": "Any",
@@ -50578,7 +50578,7 @@
 			"gta_jhash": "0x1C4F9FDB"
 		},
 		"0x2D5DC831176D0114": {
-			"name": "_0x2D5DC831176D0114",
+			"name": "UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS",
 			"comment": "",
 			"params": [
 				{
@@ -50592,7 +50592,7 @@
 			"gta_jhash": "0xA69AE16C"
 		},
 		"0xEBFA8D50ADDC54C4": {
-			"name": "_0xEBFA8D50ADDC54C4",
+			"name": "UGC_HAS_DESCRIPTION_REQUEST_FINISHED",
 			"comment": "",
 			"params": [
 				{
@@ -50606,7 +50606,7 @@
 			"gta_jhash": "0xF50BC67A"
 		},
 		"0x162C23CA83ED0A62": {
-			"name": "_0x162C23CA83ED0A62",
+			"name": "UGC_DID_DESCRIPTION_REQUEST_SUCCEED",
 			"comment": "",
 			"params": [
 				{
@@ -50638,7 +50638,7 @@
 			"gta_jhash": "0x70A2845C"
 		},
 		"0x5A34CD9C3C5BEC44": {
-			"name": "_0x5A34CD9C3C5BEC44",
+			"name": "UGC_RELEASE_CACHED_DESCRIPTION",
 			"comment": "",
 			"params": [
 				{
@@ -53378,7 +53378,7 @@
 			"params": [
 				{
 					"type": "Object",
-					"name": "p0"
+					"name": "object"
 				},
 				{
 					"type": "Any",
@@ -54072,7 +54072,7 @@
 			"params": [
 				{
 					"type": "BOOL",
-					"name": "p0"
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -54549,16 +54549,16 @@
 			"build": "1207"
 		},
 		"0xF92099527DB8E2A7": {
-			"name": "_0xF92099527DB8E2A7",
+			"name": "SUPPRESS_PICKUP_REWARD_TYPE",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "rewardType"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "suppress"
 				}
 			],
 			"return_type": "void",
@@ -55587,12 +55587,12 @@
 			"gta_jhash": "0x8F75657E"
 		},
 		"0xF239400E16C23E08": {
-			"name": "_SUPPRESS_PAD_RUMBLE",
+			"name": "SET_PAD_SHAKE_SUPPRESSED_ID",
 			"comment": "",
 			"params": [
 				{
 					"type": "int",
-					"name": "p0"
+					"name": "padIndex"
 				},
 				{
 					"type": "int",
@@ -57332,16 +57332,16 @@
 			"build": "1207"
 		},
 		"0x336511A34F2E5185": {
-			"name": "_GET_HEIGHTMAP_BOTTOM_Z_FOR_POSITION",
-			"comment": "",
+			"name": "GET_APPROX_FLOOR_FOR_POINT",
+			"comment": "Returns CGameWorldHeightMap's minimum Z value at specified point (grid node).",
 			"params": [
 				{
 					"type": "float",
-					"name": "left"
+					"name": "x"
 				},
 				{
 					"type": "float",
-					"name": "right"
+					"name": "y"
 				}
 			],
 			"return_type": "float",
@@ -57472,15 +57472,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -58288,8 +58288,8 @@
 			"gta_jhash": "0xE7C3405E"
 		},
 		"0x285D36C5C72B0569": {
-			"name": "_0x285D36C5C72B0569",
-			"comment": "",
+			"name": "TIME_SINCE_PED_LAST_SHOT",
+			"comment": "Returns time since the specified ped last shot, in seconds.",
 			"params": [
 				{
 					"type": "Ped",
@@ -60495,7 +60495,7 @@
 			"gta_jhash": "0x9A2180FF"
 		},
 		"0xEC4B4B3B9908052A": {
-			"name": "_0xEC4B4B3B9908052A",
+			"name": "SET_PED_INJURED_ON_GROUND_BEHAVIOUR",
 			"comment": "",
 			"params": [
 				{
@@ -60513,12 +60513,12 @@
 			"gta_jhash": "0xF30658D2"
 		},
 		"0x733C87D4CE22BEA2": {
-			"name": "_0x733C87D4CE22BEA2",
+			"name": "DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -61583,15 +61583,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "ItemSet",
+					"name": "itemset"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -61603,31 +61603,31 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p5"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207",
 			"gta_hash": "0x336B3D200AB007CB",
 			"gta_jhash": "0xFB18CB19"
@@ -65048,23 +65048,23 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p4"
 				}
 			],
@@ -65076,35 +65076,35 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "radius"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p7"
 				}
 			],
@@ -65409,7 +65409,7 @@
 		},
 		"0xF9ACF4A08098EA25": {
 			"name": "_0xF9ACF4A08098EA25",
-			"comment": "Actual name begins with 'S'",
+			"comment": "_SP* - _ST*",
 			"params": [
 				{
 					"type": "Ped",
@@ -66225,15 +66225,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				}
 			],
@@ -67945,8 +67945,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -68771,7 +68771,7 @@
 			"gta_jhash": "0x9194DB71"
 		},
 		"0x511F1A683387C7E2": {
-			"name": "_GET_TRACKED_PED_VISIBILITY",
+			"name": "GET_TRACKED_PED_PIXELCOUNT",
 			"comment": "",
 			"params": [
 				{
@@ -68786,7 +68786,7 @@
 		},
 		"0x91C8E617F64188AC": {
 			"name": "IS_TRACKED_PED_VISIBLE",
-			"comment": "returns whether or not a ped is visible within your FOV, not this check auto's to false after a certain distance.\n\n\nTarget needs to be tracked.. won't work otherwise.",
+			"comment": "Returns whether or not a ped is visible within your FOV, not this check auto's to false after a certain distance.\nTarget needs to be tracked first, won't work otherwise.",
 			"params": [
 				{
 					"type": "Ped",
@@ -69738,42 +69738,42 @@
 		},
 		"0x2DF9038C90AD5264": {
 			"name": "SPAWNPOINTS_START_SEARCH",
-			"comment": "",
+			"comment": "Params: p4 = 35.f, duration = 5000 in R* Scripts",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "width"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "int",
+					"name": "spawnpointsFlag"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
-					"name": "p7"
+					"type": "int",
+					"name": "duration"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p8"
 				}
 			],
@@ -69784,50 +69784,50 @@
 		},
 		"0xB2AFF10216DEFA2F": {
 			"name": "SPAWNPOINTS_START_SEARCH_IN_ANGLED_AREA",
-			"comment": "",
+			"comment": "Searching area between coords 1 and 2",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "float",
+					"name": "x1"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "y1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "z1"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "x2"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "y2"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "float",
+					"name": "z2"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "float",
+					"name": "width"
 				},
 				{
-					"type": "Any",
-					"name": "p7"
+					"type": "int",
+					"name": "spawnpointsFlag"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p8"
 				},
 				{
-					"type": "Any",
-					"name": "p9"
+					"type": "int",
+					"name": "duration"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p10"
 				}
 			],
@@ -69846,7 +69846,7 @@
 				},
 				{
 					"type": "int",
-					"name": "flags"
+					"name": "spawnpointsFlag"
 				},
 				{
 					"type": "float",
@@ -71453,7 +71453,7 @@
 		},
 		"0x06D26A96CA1BCA75": {
 			"name": "_SET_PED_MOTIVATION",
-			"comment": "motivationState: 0 - 10\nIf targetPed is set to 0 the ped motivationState affects everyone",
+			"comment": "enum eMotivationState\n{\n\tTOILET_STATE,\n\tFEAR_STATE,\n\tANGRY_STATE,\n\tAGITATION_STATE,\n\tHUNGRY_STATE,\n\tTIRED_STATE,\n\tSAD_STATE,\n\tBRAVE_STATE,\n\tOFFER_ITEM_STATE,\n\tSUSPICION,\n\tDRUNK_STATE\n};\n\nIf targetPed is set to 0 the ped motivationState affects everyone",
 			"params": [
 				{
 					"type": "Ped",
@@ -71525,7 +71525,7 @@
 		},
 		"0x33FA048675821DA7": {
 			"name": "_GET_IS_PED_MOTIVATION_STATE_ENABLED",
-			"comment": "",
+			"comment": "motivationState: see _SET_PED_MOTIVATION",
 			"params": [
 				{
 					"type": "Ped",
@@ -71541,7 +71541,7 @@
 		},
 		"0x2EB75FB86C41F026": {
 			"name": "_SET_PED_MOTIVATION_STATE_OVERRIDE",
-			"comment": "motivationState = 3: AGITATION_STATE in R* Scripts",
+			"comment": "motivationState: see _SET_PED_MOTIVATION",
 			"params": [
 				{
 					"type": "Ped",
@@ -71780,8 +71780,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -71796,12 +71796,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "targetPed"
 				}
 			],
 			"return_type": "void",
@@ -72064,44 +72064,44 @@
 			"build": "1207"
 		},
 		"0xBC6DF00D7A4A6819": {
-			"name": "_0xBC6DF00D7A4A6819",
-			"comment": "",
+			"name": "_SET_META_PED_TAG",
+			"comment": "Use to apply metaped player components\nReplaces asset, alternatively you can remove assets using REMOVE_TAG_FROM_META_PED",
 			"params": [
 				{
 					"type": "Ped",
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "iDrawable"
+					"type": "Hash",
+					"name": "drawable"
 				},
 				{
-					"type": "Any",
-					"name": "iAlbedo"
+					"type": "Hash",
+					"name": "albedo"
 				},
 				{
-					"type": "Any",
-					"name": "iNormal"
+					"type": "Hash",
+					"name": "normal"
 				},
 				{
-					"type": "Any",
-					"name": "iMaterial"
+					"type": "Hash",
+					"name": "material"
 				},
 				{
-					"type": "Any",
-					"name": "iPalette"
+					"type": "Hash",
+					"name": "palette"
 				},
 				{
-					"type": "Any",
-					"name": "iTint0"
+					"type": "int",
+					"name": "tint0"
 				},
 				{
-					"type": "Any",
-					"name": "iTint1"
+					"type": "int",
+					"name": "tint1"
 				},
 				{
-					"type": "Any",
-					"name": "iTint2"
+					"type": "int",
+					"name": "tint2"
 				}
 			],
 			"return_type": "void",
@@ -72145,7 +72145,7 @@
 		},
 		"0xA622E66EEE92A08D": {
 			"name": "_GET_NUM_COMPONENT_CATEGORIES_IN_PED",
-			"comment": "",
+			"comment": "Works similar to 0x90403E8107B60E81 (_GET_NUM_COMPONENTS_IN_PED) but is used to get category hashes instead",
 			"params": [
 				{
 					"type": "Ped",
@@ -72480,8 +72480,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -72492,11 +72492,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -72576,19 +72576,19 @@
 			"build": "1207"
 		},
 		"0x98082246107A6ACF": {
-			"name": "_0x98082246107A6ACF",
-			"comment": "",
+			"name": "_IS_META_PED_OUTFIT_SADDLE_EQUIPPED",
+			"comment": "Used in script function HORSE_IS_META_PED_OUTFIT_SADDLE_EQUIPPED",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "outfit"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x851966E1E35AF491": {
@@ -72805,30 +72805,30 @@
 		},
 		"0x3FCBB5FCFD968698": {
 			"name": "_0x3FCBB5FCFD968698",
-			"comment": "",
+			"comment": "Used for script function PROCESS_PLAYER_HAT_EVENT\nReturns requestId to be used with 0x13E7320C762F0477",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "drawable"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "albedo"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "Hash",
+					"name": "normal"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "Hash",
+					"name": "material"
 				},
 				{
 					"type": "Any",
 					"name": "p4"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207"
 		},
 		"0x91FE941F9FCFB702": {
@@ -72860,15 +72860,15 @@
 					"name": "p1"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p4"
 				}
 			],
@@ -73408,15 +73408,15 @@
 			"build": "1207"
 		},
 		"0x22F2A386D43048A9": {
-			"name": "_0x22F2A386D43048A9",
-			"comment": "",
+			"name": "_GET_PED_STAMINA_NORMALIZED",
+			"comment": "Returns stamina normalizedValue / normalizedUnlockedMax",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "float",
 			"build": "1207"
 		},
 		"0xCB42AFE2B613EE55": {
@@ -73433,7 +73433,7 @@
 		},
 		"0x36513AFFC703C60D": {
 			"name": "_0x36513AFFC703C60D",
-			"comment": "",
+			"comment": "_RESET_PED_*",
 			"params": [
 				{
 					"type": "Any",
@@ -73633,7 +73633,7 @@
 		},
 		"0x5D4CD22A8C82A81A": {
 			"name": "_0x5D4CD22A8C82A81A",
-			"comment": "",
+			"comment": "Related to ped hat",
 			"params": [
 				{
 					"type": "Ped",
@@ -74588,7 +74588,7 @@
 			"build": "1207"
 		},
 		"0xAF61B3CD8C3B82C3": {
-			"name": "_0xAF61B3CD8C3B82C3",
+			"name": "_IS_USING_SLIPSTREAM",
 			"comment": "_IS_TRACKED_* - IS_V*",
 			"params": [
 				{
@@ -75048,7 +75048,7 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -76070,11 +76070,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "Entity",
 			"build": "1207"
 		},
 		"0x0CADC3A977997472": {
@@ -76086,11 +76086,11 @@
 					"name": "p0"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "Entity",
 			"build": "1207"
 		},
 		"0x7B204F88F6C3D287": {
@@ -78298,7 +78298,7 @@
 			"gta_jhash": "0x774A4C54"
 		},
 		"0x0760D6F70EBCC05C": {
-			"name": "_0x0760D6F70EBCC05C",
+			"name": "_NETWORK_HAS_PLAYER_VALID_PED",
 			"comment": "Returns true if the given player has a valid ped.",
 			"params": [
 				{
@@ -78613,7 +78613,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "enabled"
+					"name": "disabled"
 				}
 			],
 			"return_type": "void",
@@ -78640,55 +78640,55 @@
 			"build": "1207"
 		},
 		"0xA3DB37EDF9A74635": {
-			"name": "_0xA3DB37EDF9A74635",
+			"name": "_MODIFY_PLAYER_UI_PROMPT_FOR_PED",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "promptType"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "int",
+					"name": "promptMode"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "BOOL",
+					"name": "enabled"
 				}
 			],
 			"return_type": "void",
 			"build": "1207"
 		},
 		"0xEA8F168A76A0B9BC": {
-			"name": "_0xEA8F168A76A0B9BC",
-			"comment": "",
+			"name": "_GET_PLAYER_UI_PROMPT_FOR_PED_IS_ENABLED",
+			"comment": "Returns true if PromptType is enabled for ped (mount)",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "promptType"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "int",
+					"name": "promptMode"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x93624B36E8851B42": {
@@ -78696,8 +78696,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				}
 			],
 			"return_type": "void",
@@ -78987,14 +78987,14 @@
 		},
 		"0x927861B2C08DBEA5": {
 			"name": "_0x927861B2C08DBEA5",
-			"comment": "",
+			"comment": "_GET_A* - _GET_C*",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x1A51BFE60708E482": {
@@ -79035,7 +79035,7 @@
 		},
 		"0xBEA3A6E5F5F79A6F": {
 			"name": "_0xBEA3A6E5F5F79A6F",
-			"comment": "",
+			"comment": "_GET_PLAYER_I*",
 			"params": [
 				{
 					"type": "Any",
@@ -79129,18 +79129,18 @@
 		},
 		"0x7AE93C45EC14A166": {
 			"name": "_0x7AE93C45EC14A166",
-			"comment": "",
+			"comment": "Only used in script function PROCESS_PED_INTERRUPT_DIALOGUE\n_GET_PLAYER_*",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped*",
+					"name": "ped"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x3A3CD06597388322": {
@@ -79218,11 +79218,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -79231,19 +79231,19 @@
 		},
 		"0xA0C683284DF027C7": {
 			"name": "_0xA0C683284DF027C7",
-			"comment": "",
+			"comment": "Params: p1 is mostly 15, sometimes 1 in R* Scripts (Function: PLAYER_TOGGLE_PICK_UP_HATS)",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "BOOL",
+					"name": "enable"
 				}
 			],
 			"return_type": "void",
@@ -79270,11 +79270,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p1"
 				}
 			],
@@ -79558,31 +79558,31 @@
 		},
 		"0xAC22AA6DF4D1C1DE": {
 			"name": "_0xAC22AA6DF4D1C1DE",
-			"comment": "",
+			"comment": "Used in script function: NET_AUTO_FOLLOW_UPDATE_LEADER_VALUES",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p3"
 				},
 				{
 					"type": "Any",
-					"name": "p4"
+					"name": "followMode"
 				},
 				{
 					"type": "Any",
-					"name": "p5"
+					"name": "followPriority"
 				},
 				{
 					"type": "Any",
@@ -79593,16 +79593,16 @@
 			"build": "1207"
 		},
 		"0x0C6B89876262A99D": {
-			"name": "_0x0C6B89876262A99D",
+			"name": "_REMOVE_PLAYER_AS_FOLLOW_TARGET",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -79625,12 +79625,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -79645,16 +79645,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "BOOL",
+					"name": "useSteerassist"
 				}
 			],
 			"return_type": "void",
@@ -79665,12 +79665,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -79693,19 +79693,19 @@
 			"build": "1207"
 		},
 		"0xE24C64D9ADED2EF5": {
-			"name": "_0xE24C64D9ADED2EF5",
+			"name": "_IS_PLAYER_FOLLOWING_TARGET",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0xE7F8707269544B29": {
@@ -79713,15 +79713,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0xE631EAF35828FA67": {
@@ -80254,35 +80254,35 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "Entity",
+					"name": "targetEntity"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p7"
 				}
 			],
@@ -80346,8 +80346,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
 					"type": "Any",
@@ -82373,12 +82373,12 @@
 			"gta_jhash": "0x9DF75B2A"
 		},
 		"0x5B9813ECF7633FE8": {
-			"name": "_0x5B9813ECF7633FE8",
+			"name": "_SET_MOUNT_PROMPT_DISABLED",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "BOOL",
+					"name": "disabled"
 				}
 			],
 			"return_type": "void",
@@ -83379,8 +83379,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				}
 			],
 			"return_type": "void",
@@ -83899,15 +83899,15 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "weapon"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				}
 			],
@@ -84784,31 +84784,31 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "flags"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				}
 			],
@@ -84832,31 +84832,31 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "flags"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "Hash",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				}
 			],
@@ -88454,7 +88454,7 @@
 			"gta_jhash": "0x15607620"
 		},
 		"0x176D077685CD83E4": {
-			"name": "_SC_INBOX_MESSAGE_GET_STRING",
+			"name": "SC_INBOX_MESSAGE_GET_RAW_TYPE_AT_INDEX",
 			"comment": "",
 			"params": [
 				{
@@ -91907,7 +91907,7 @@
 	"TASK": {
 		"0xE73A266DB0CA9042": {
 			"name": "TASK_PAUSE",
-			"comment": "This tasks the ped to do nothing for the specified amount of miliseconds.\nThis is useful if you want to add a delay between tasks when using a sequence task.",
+			"comment": "This tasks the ped to do nothing for the specified amount of milliseconds.\nThis is useful if you want to add a delay between tasks when using a sequence task.",
 			"params": [
 				{
 					"type": "Ped",
@@ -92234,8 +92234,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -92246,12 +92246,12 @@
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "int",
+					"name": "flags"
 				}
 			],
 			"return_type": "void",
@@ -92262,16 +92262,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "flags"
 				}
 			],
 			"return_type": "void",
@@ -92406,8 +92406,8 @@
 					"name": "p4"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "Ped",
+					"name": "targetPed"
 				}
 			],
 			"return_type": "void",
@@ -92945,7 +92945,7 @@
 		},
 		"0x79482C12482A860D": {
 			"name": "TASK_MOVE_FOLLOW_ROAD_USING_NAVMESH",
-			"comment": "",
+			"comment": "Params: p5 is always 0 in R* Scripts",
 			"params": [
 				{
 					"type": "Ped",
@@ -92956,16 +92956,16 @@
 					"name": "p1"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
 					"type": "Any",
@@ -92977,7 +92977,7 @@
 		},
 		"0x93B93A37987F1F3D": {
 			"name": "TASK_ACHIEVE_HEADING",
-			"comment": "Makes the specified ped achieve the specified heading.\n\npedHandle: The handle of the ped to assign the task to.\nheading: The desired heading.\ntimeout: The time, in milliseconds, to allow the task to complete. If the task times out, it is cancelled, and the ped will stay at the heading it managed to reach in the time.",
+			"comment": "Makes the specified ped achieve the specified heading.\n\npedHandle: The handle of the ped to assign the task to.\nheading: The desired heading.\ntimeout: The time, in milliseconds, to allow the task to complete. If the task times out, it is canceled, and the ped will stay at the heading it managed to reach in the time.",
 			"params": [
 				{
 					"type": "Ped",
@@ -93069,35 +93069,35 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "AnimScene",
+					"name": "animScene"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "const char*",
+					"name": "playbackListName"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p8"
 				}
 			],
@@ -93187,8 +93187,8 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "targetPed"
 				},
 				{
 					"type": "Any",
@@ -93199,15 +93199,15 @@
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				},
 				{
@@ -93219,11 +93219,11 @@
 					"name": "p8"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p9"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p10"
 				}
 			],
@@ -93507,44 +93507,44 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "fleeFromTarget"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "float",
+					"name": "distance"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p8"
 				},
 				{
-					"type": "Any",
-					"name": "p9"
+					"type": "Ped",
+					"name": "targetPed"
 				}
 			],
 			"return_type": "void",
@@ -93621,8 +93621,8 @@
 					"name": "fleeSpeed"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "Ped",
+					"name": "targetPed"
 				}
 			],
 			"return_type": "void",
@@ -94251,8 +94251,8 @@
 					"name": "action"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "Ped",
+					"name": "targetPed"
 				},
 				{
 					"type": "Any",
@@ -94319,11 +94319,11 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "targetPed"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				},
 				{
@@ -94455,8 +94455,8 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "targetPed"
 				},
 				{
 					"type": "Any",
@@ -95173,8 +95173,8 @@
 					"name": "speed"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "Entity",
+					"name": "entity"
 				},
 				{
 					"type": "BOOL",
@@ -95778,7 +95778,7 @@
 				},
 				{
 					"type": "Any*",
-					"name": "p2"
+					"name": "guid"
 				},
 				{
 					"type": "Any",
@@ -95987,23 +95987,23 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Entity",
+					"name": "lookAtTarget"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "duration"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p5"
 				}
 			],
@@ -96259,32 +96259,32 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Ped",
+					"name": "targetPed"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p3"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "Ped",
+					"name": "targetPed2"
 				},
 				{
 					"type": "Any",
@@ -96303,8 +96303,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
 					"type": "Any",
@@ -97136,50 +97136,50 @@
 		},
 		"0x7F241A0D14354583": {
 			"name": "TASK_VEHICLE_DRIVE_TO_DESTINATION",
-			"comment": "",
+			"comment": "flags: 67108864, 2097152, 524564, 524675 (eDrivingFlags)\np7 = 6 or 3\np8 = x coordinate\np9 - 8.f\np10 = false",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "driver"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "float",
+					"name": "speed"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "int",
+					"name": "drivingFlags"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
-					"name": "p8"
+					"type": "float",
+					"name": "stoppingRange1"
 				},
 				{
-					"type": "Any",
-					"name": "p9"
+					"type": "float",
+					"name": "stoppingRange2"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p10"
 				}
 			],
@@ -97188,42 +97188,42 @@
 		},
 		"0x391073B9D3CCE2BA": {
 			"name": "_TASK_VEHICLE_DRIVE_TO_DESTINATION_2",
-			"comment": "",
+			"comment": "Tasks vehicle towards owner",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "speed"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p8"
 				}
 			],
@@ -97264,39 +97264,39 @@
 		},
 		"0x089FF2FB965F0A29": {
 			"name": "TASK_VEHICLE_DRIVE_STRAIGHT_TO_POINT",
-			"comment": "Old name: _TASK_VEHICLE_DRIVE_TO_POINT",
+			"comment": "Old name: _TASK_VEHICLE_DRIVE_TO_POINT\nflag: 524419 and 0 in shop_horse_shop R* Script",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "driver"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
-					"name": "p7"
+					"type": "int",
+					"name": "flag"
 				}
 			],
 			"return_type": "void",
@@ -97304,30 +97304,30 @@
 		},
 		"0x6524A8981E8BE7C9": {
 			"name": "_TASK_VEHICLE_DRIVE_TO_POINT_2",
-			"comment": "",
+			"comment": "Params: p4 = 3.f or 8.f, p5 = 0.25f, p6 = 0 in R* Scripts",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p5"
 				},
 				{
@@ -97367,23 +97367,23 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x9454528DF15D657A": {
@@ -97745,24 +97745,24 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Entity",
+					"name": "entity"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Entity",
+					"name": "targetEntity"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "duration"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "Hash",
+					"name": "firingPattern"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "BOOL",
+					"name": "affectCockedState"
 				}
 			],
 			"return_type": "void",
@@ -97791,16 +97791,16 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Entity",
+					"name": "entity"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Entity",
+					"name": "targetEntity"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "int",
+					"name": "duration"
 				},
 				{
 					"type": "Any",
@@ -98599,27 +98599,27 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "int",
+					"name": "timeout"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p6"
 				},
 				{
@@ -98631,15 +98631,15 @@
 					"name": "p8"
 				},
 				{
-					"type": "Any",
-					"name": "p9"
+					"type": "ScrHandle",
+					"name": "coverpoint"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p10"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p11"
 				},
 				{
@@ -99376,7 +99376,7 @@
 		},
 		"0xADC45010BC17AF0E": {
 			"name": "_0xADC45010BC17AF0E",
-			"comment": "",
+			"comment": "_SET_SCENARIO_POINT_*",
 			"params": [
 				{
 					"type": "Any",
@@ -99468,7 +99468,7 @@
 		},
 		"0xA8452DD321607029": {
 			"name": "_GET_SCENARIO_POINT_COORDS",
-			"comment": "p1 is always true",
+			"comment": "Params: p1 is always true in R* Scripts",
 			"params": [
 				{
 					"type": "int",
@@ -99508,11 +99508,11 @@
 		},
 		"0xB93EA7184BAA85C3": {
 			"name": "_GET_SCENARIO_POINT_HEADING",
-			"comment": "p1 is always true",
+			"comment": "Params: p1 is always true in R* Scripts",
 			"params": [
 				{
 					"type": "int",
-					"name": "Scenario"
+					"name": "scenario"
 				},
 				{
 					"type": "BOOL",
@@ -99600,7 +99600,7 @@
 		},
 		"0xA7479FB665361EDB": {
 			"name": "_0xA7479FB665361EDB",
-			"comment": "",
+			"comment": "_SET_SCENARIO_*",
 			"params": [
 				{
 					"type": "Any",
@@ -103119,14 +103119,14 @@
 				},
 				{
 					"type": "int",
-					"name": "p3"
+					"name": "flag"
 				},
 				{
 					"type": "int",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p5"
 				},
 				{
@@ -103846,40 +103846,40 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "const char*",
+					"name": "waypointRecording"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "int",
+					"name": "drivingMode"
 				},
 				{
 					"type": "Any",
 					"name": "p4"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "int",
+					"name": "eWaypoint"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "int",
+					"name": "flag"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p8"
 				},
 				{
-					"type": "Any",
-					"name": "p9"
+					"type": "float",
+					"name": "stoppingDist"
 				},
 				{
 					"type": "Any",
@@ -105294,7 +105294,7 @@
 			"build": "1207"
 		},
 		"0xAB591AE6B48B913E": {
-			"name": "_TASK_SET_HOGTIE_ESCAPE_TIMER",
+			"name": "_SET_HOGTIE_ESCAPE_TIMER",
 			"comment": "Sets the time it takes for a hogtied ped to escape\n-1.0f for ped to never escape",
 			"params": [
 				{
@@ -106622,7 +106622,7 @@
 		},
 		"0xB31A277C1AC7B7FF": {
 			"name": "TASK_PLAY_EMOTE_WITH_HASH",
-			"comment": "category:\nenum class eEmoteCategory\n{\n\tReaction,\n\tAction,\n\tTaunts,\n\tGreets,\n\tTwirlGun,\n\tDances\n};\n\np2: usually 2\n\nemoteType: https://alloc8or.re/rdr3/doc/enums/eEmoteType.txt",
+			"comment": "https://github.com/femga/rdr3_discoveries/blob/master/animations/kit_emotes_list.lua\nemote: https://alloc8or.re/rdr3/doc/enums/eEmote.txt\n\nenum eEmoteType\n{\n\tEMOTE_TYPE_INVALID = -1,\n\tEMOTE_TYPE_REACT,\n\tEMOTE_TYPE_ACTION,\n\tEMOTE_TYPE_TAUNT,\n\tEMOTE_TYPE_GREET,\n\tEMOTE_TYPE_TWIRL_GUN,\n\tEMOTE_TYPE_DANCE_FLOOR\n};\n\nenum eEmotePlaybackMode\n{\n\tEMOTE_PM_INVALID = -1,\n\tEMOTE_PM_UPPERBODY,\n\tEMOTE_PM_UPPERBODY_LOOP,\n\tEMOTE_PM_FULLBODY,\n};",
 			"params": [
 				{
 					"type": "Ped",
@@ -106630,31 +106630,31 @@
 				},
 				{
 					"type": "int",
-					"name": "category"
-				},
-				{
-					"type": "int",
-					"name": "p2"
-				},
-				{
-					"type": "Hash",
 					"name": "emoteType"
 				},
 				{
-					"type": "BOOL",
-					"name": "bIsSecondaryTask"
+					"type": "int",
+					"name": "playbackMode"
+				},
+				{
+					"type": "Hash",
+					"name": "emote"
 				},
 				{
 					"type": "BOOL",
-					"name": "bCanBreakOut"
+					"name": "isSecondaryTask"
 				},
 				{
 					"type": "BOOL",
-					"name": "bDisableEarlyOutAnimTag"
+					"name": "canBreakOut"
 				},
 				{
 					"type": "BOOL",
-					"name": "bIgnoreInvalidMainTask"
+					"name": "disableEarlyOutAnimTag"
+				},
+				{
+					"type": "BOOL",
+					"name": "ignoreInvalidMainTask"
 				},
 				{
 					"type": "BOOL",
@@ -106674,35 +106674,35 @@
 				},
 				{
 					"type": "int",
-					"name": "category"
-				},
-				{
-					"type": "int",
-					"name": "p2"
-				},
-				{
-					"type": "Hash",
 					"name": "emoteType"
 				},
 				{
-					"type": "BOOL",
-					"name": "p4"
+					"type": "int",
+					"name": "playbackMode"
+				},
+				{
+					"type": "Hash",
+					"name": "emote"
 				},
 				{
 					"type": "BOOL",
-					"name": "p5"
+					"name": "isSecondaryTask"
 				},
 				{
 					"type": "BOOL",
-					"name": "p6"
+					"name": "canBreakOut"
 				},
 				{
 					"type": "BOOL",
-					"name": "p7"
+					"name": "disableEarlyOutAnimTag"
 				},
 				{
 					"type": "BOOL",
-					"name": "p8"
+					"name": "ignoreInvalidMainTask"
+				},
+				{
+					"type": "BOOL",
+					"name": "destroyProps"
 				}
 			],
 			"return_type": "void",
@@ -110724,16 +110724,16 @@
 			"gta_jhash": "0x013B10B6"
 		},
 		"0x424FFCB9F0D2D4B5": {
-			"name": "_0x424FFCB9F0D2D4B5",
+			"name": "_SET_ALL_VEHICLE_GENERATORS_DISABLED_FOR_VOLUME",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -111271,12 +111271,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -113176,7 +113176,7 @@
 			"gta_jhash": "0x009AB49E"
 		},
 		"0x33992A808DF1C1BA": {
-			"name": "_0x33992A808DF1C1BA",
+			"name": "SET_VEHICLE_RESPECTS_LOCKS_WHEN_HAS_DRIVER",
 			"comment": "",
 			"params": [
 				{
@@ -114874,8 +114874,8 @@
 			"gta_jhash": "0x37BC6ACB"
 		},
 		"0x2701D01D5E18FC31": {
-			"name": "_HAS_FILLED_VEHICLE_POPULATION",
-			"comment": "HAS_*",
+			"name": "HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED",
+			"comment": "",
 			"params": [],
 			"return_type": "BOOL",
 			"build": "1207",
@@ -114983,7 +114983,7 @@
 			"gta_jhash": "0x0C0332A6"
 		},
 		"0x80DDCCB2F4A3EB57": {
-			"name": "_IS_VEHICLE_SEAT_ACCESSIBLE",
+			"name": "IS_ENTRY_POINT_FOR_SEAT_CLEAR",
 			"comment": "",
 			"params": [
 				{
@@ -115409,11 +115409,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -115425,11 +115425,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "vehicle"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p1"
 				}
 			],
@@ -115541,7 +115541,7 @@
 			"gta_jhash": "0x5130DB1E"
 		},
 		"0x1549BA7FE83A2383": {
-			"name": "_SET_VEHICLE_JET_ENGINE_ON",
+			"name": "SET_VEHICLE_KEEP_ENGINE_ON_WHEN_ABANDONED",
 			"comment": "",
 			"params": [
 				{
@@ -118095,12 +118095,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Volume",
+					"name": "aggregate"
 				}
 			],
 			"return_type": "void",
@@ -118111,12 +118111,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Volume",
+					"name": "volume"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Volume",
+					"name": "aggregate"
 				}
 			],
 			"return_type": "void",
@@ -120758,26 +120758,26 @@
 		},
 		"0x9F67929D98E7C6E8": {
 			"name": "_0x9F67929D98E7C6E8",
-			"comment": "",
+			"comment": "Returns weaponHash",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "weaponGroup"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p2"
 				},
 				{
-					"type": "Any",
+					"type": "BOOL",
 					"name": "p3"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "Hash",
 			"build": "1207"
 		},
 		"0x08FF1099ED2E6E21": {
@@ -121223,12 +121223,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -121239,12 +121239,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -121255,12 +121255,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
@@ -121271,12 +121271,12 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "toggle"
 				}
 			],
 			"return_type": "void",
