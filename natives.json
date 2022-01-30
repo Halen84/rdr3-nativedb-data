@@ -5306,7 +5306,7 @@
 			"build": "1207"
 		},
 		"0x6378A235374B852F": {
-			"name": "_0x6378A235374B852F",
+			"name": "_BLOCK_SPEECH_CONTEXT",
 			"comment": "",
 			"params": [
 				{
@@ -10326,8 +10326,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "const char* dictionary",
-					"name": "p0"
+					"type": "const char*",
+					"name": "dictionary"
 				},
 				{
 					"type": "const char*",
@@ -31208,7 +31208,7 @@
 			"build": "1207"
 		},
 		"0x1BE19185B8AFE299": {
-			"name": "_UIPROMPT_IS_CONTROL_ACTION_ACTIVE",
+			"name": "UI_PROMPT_IS_CONTROL_ACTION_ACTIVE",
 			"comment": "",
 			"params": [
 				{
@@ -42780,8 +42780,8 @@
 					"name": "numCheckpoint"
 				},
 				{
-					"type": "numLaps",
-					"name": "p1"
+					"type": "int",
+					"name": "numLaps"
 				},
 				{
 					"type": "int",
