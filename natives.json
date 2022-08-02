@@ -3946,7 +3946,7 @@
 			"build": "1207"
 		},
 		"0xDCF5BA95BBF0FABA": {
-			"name": "_0xDCF5BA95BBF0FABA",
+			"name": "_PLAY_SOUND_FROM_POSITION_WITH_ID",
 			"comment": "Starts Audio Loop\n_PLAY_SOUND_FROM_ENTITY* - _PLAY_SOUND_FRONTEND*",
 			"params": [
 				{
@@ -20898,8 +20898,8 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				}
 			],
 			"return_type": "void",
@@ -68609,8 +68609,8 @@
 			"build": "1232"
 		},
 		"0xC488B8C0E52560D8": {
-			"name": "_0xC488B8C0E52560D8",
-			"comment": "_IS_PED_D*",
+			"name": "_IS_PED_DOING_SCENARIO_TRANSITION",
+			"comment": "",
 			"params": [
 				{
 					"type": "Ped",
@@ -69055,7 +69055,7 @@
 			"build": "1207"
 		},
 		"0xE3144B932DFDFF65": {
-			"name": "_0xE3144B932DFDFF65",
+			"name": "_SET_PED_DIRT_CLEANED",
 			"comment": "Params: ped, 0f, -1, true, true in R* MP Scripts\n_SET_PED_DE* - _SET_PED_F*",
 			"params": [
 				{
@@ -73678,56 +73678,56 @@
 			"build": "1207"
 		},
 		"0x4F5EBE70081E5A20": {
-			"name": "_0x4F5EBE70081E5A20",
-			"comment": "",
+			"name": "_CREATE_GRAVITY_WELL",
+			"comment": "Creates a handle to an instance of \"CScriptResource_GravityWell\", this system forces local ped to target specified position when moving, however player still can interrupt this. Can be useful to \"point\" player at some specific position. Only works while on-foot.\n\n_CREATE_[P-Z]",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "float",
+					"name": "xPos"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "yPos"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "float",
+					"name": "zPos"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "heading"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "radius"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p5"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p6"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p7"
 				},
 				{
-					"type": "Any",
-					"name": "p8"
+					"type": "BOOL",
+					"name": "stopAtDestination"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "int",
 			"build": "1207"
 		},
 		"0x87247BC60B60BED8": {
-			"name": "_0x87247BC60B60BED8",
+			"name": "_REMOVE_GRAVITY_WELL",
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "handle"
 				}
 			],
 			"return_type": "void",
@@ -74254,28 +74254,28 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "Hash*",
+					"name": "drawable"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "Hash*",
+					"name": "albedo"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "Hash*",
+					"name": "normal"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "Hash*",
+					"name": "material"
 				}
 			],
 			"return_type": "BOOL",
@@ -74286,28 +74286,28 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Ped",
+					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "int",
+					"name": "index"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "Hash*",
+					"name": "pallete"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "int*",
+					"name": "tint0"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "int*",
+					"name": "tint1"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "int*",
+					"name": "tint2"
 				}
 			],
 			"return_type": "BOOL",
@@ -78816,16 +78816,16 @@
 			"build": "1207"
 		},
 		"0x8674D138391FFB1B": {
-			"name": "_0x8674D138391FFB1B",
-			"comment": "",
+			"name": "_SET_DISABLE_PLAYER_WANTED_LEVEL",
+			"comment": "Disables the players ability to be wanted by lawmen",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "disable"
 				}
 			],
 			"return_type": "void",
@@ -80422,7 +80422,7 @@
 			"gta_jhash": "0x0B270E0F"
 		},
 		"0x4A056257802DD3E5": {
-			"name": "_SET_LOCKON_TO_FRIENDLY_PLAYERS",
+			"name": "SET_LOCKON_TO_FRIENDLY_PLAYERS",
 			"comment": "",
 			"params": [
 				{
@@ -83773,11 +83773,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -83789,11 +83789,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -83805,11 +83805,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Player",
+					"name": "player"
 				},
 				{
-					"type": "Any",
+					"type": "const char*",
 					"name": "p1"
 				}
 			],
@@ -83818,15 +83818,15 @@
 		},
 		"0xBB6EA5D59E926095": {
 			"name": "_0xBB6EA5D59E926095",
-			"comment": "",
+			"comment": "NPEW__ENUM__EMOTE_CATEGORY_INVALID = -1\nNPEW__ENUM__EMOTE_CATEGORY_ACTIONS\nNPEW__ENUM__EMOTE_CATEGORY_ANTAGONIZE\nNPEW__ENUM__EMOTE_CATEGORY_REACTIONS\nNPEW__ENUM__EMOTE_CATEGORY_GREET\nNPEW__ENUM__NUM_EMOTE_CATEGORIES\nNPEW__ENUM__NUM_DISPLAY_TEXTURES",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "int",
+					"name": "category"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "Hash",
+					"name": "emote"
 				}
 			],
 			"return_type": "void",
@@ -83837,11 +83837,11 @@
 			"comment": "",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Hash",
+					"name": "emote"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1232"
 		},
 		"0x929DDD5538F3DF1F": {
@@ -104215,11 +104215,11 @@
 				},
 				{
 					"type": "const char*",
-					"name": "p1"
+					"name": "moveNetworkDefName"
 				},
 				{
 					"type": "Any*",
-					"name": "data"
+					"name": "taskData"
 				},
 				{
 					"type": "float",
@@ -104250,59 +104250,59 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "const char*",
+					"name": "moveNetworkDefName"
 				},
 				{
-					"type": "Any",
-					"name": "p2"
+					"type": "Any*",
+					"name": "taskData"
 				},
 				{
-					"type": "Any",
-					"name": "p3"
+					"type": "float",
+					"name": "xPos"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "float",
+					"name": "yPos"
 				},
 				{
-					"type": "Any",
-					"name": "p5"
+					"type": "float",
+					"name": "zPos"
 				},
 				{
-					"type": "Any",
-					"name": "p6"
+					"type": "float",
+					"name": "xRot"
 				},
 				{
-					"type": "Any",
-					"name": "p7"
+					"type": "float",
+					"name": "yRot"
 				},
 				{
-					"type": "Any",
-					"name": "p8"
+					"type": "float",
+					"name": "zRot"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p9"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p10"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p11"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p12"
 				},
 				{
-					"type": "Any",
-					"name": "p13"
+					"type": "int",
+					"name": "flag"
 				},
 				{
-					"type": "Any",
+					"type": "int",
 					"name": "p14"
 				}
 			],
@@ -116860,15 +116860,15 @@
 			"build": "1207"
 		},
 		"0x7C9E45A4CED2E8DA": {
-			"name": "_0x7C9E45A4CED2E8DA",
-			"comment": "",
+			"name": "_SET_BALLOON_HOVER_STATE",
+			"comment": "Params: 1.0f will make balloon hover",
 			"params": [
 				{
-					"type": "Any",
-					"name": "p0"
+					"type": "Vehicle",
+					"name": "balloon"
 				},
 				{
-					"type": "Any",
+					"type": "float",
 					"name": "p1"
 				}
 			],
@@ -118873,7 +118873,7 @@
 			"build": "1207"
 		},
 		"0xF6A8A652A6B186CD": {
-			"name": "_IS_VOLUME_LOCK_REQUEST_ID_VALID",
+			"name": "_IS_VOLUME_LOCK_REQUEST_VALID_2",
 			"comment": "",
 			"params": [
 				{
@@ -119157,7 +119157,7 @@
 			"build": "1207"
 		},
 		"0x77A6E4AD0C496F81": {
-			"name": "_GET_LOCK_VOLUME_REQUEST_ID",
+			"name": "_FIND_VOLUME_LOCK_REQUEST_ID_WITH_ARGS",
 			"comment": "",
 			"params": [
 				{
@@ -120795,8 +120795,8 @@
 			"build": "1207"
 		},
 		"0x08FF1099ED2E6E21": {
-			"name": "_0x08FF1099ED2E6E21",
-			"comment": "Returns weaponHash",
+			"name": "_GET_DEFAULT_UNARMED_WEAPON_HASH",
+			"comment": "Returns the ped's default unarmed weapon hash as defined in CPedModelInfo (DefaultUnarmedWeapon).\nFalls back to WEAPON_UNARMED if the ped doesn't have a valid model info pointer, or 0 if the ped doesn't exist.",
 			"params": [
 				{
 					"type": "Ped",
