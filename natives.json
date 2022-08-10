@@ -14905,7 +14905,7 @@
 			"build": "1207"
 		},
 		"0x129567F0C05F81B9": {
-			"name": "_PARSEDATA_UNLOAD_FILE",
+			"name": "_PARSEDDATA_UNLOAD_FILE",
 			"comment": "",
 			"params": [
 				{
@@ -14948,7 +14948,7 @@
 			"build": "1207"
 		},
 		"0xAE156A747C39A741": {
-			"name": "_PARSEDATA_REGISTER_QUERY",
+			"name": "_PARSEDDATA_REGISTER_QUERY",
 			"comment": "",
 			"params": [
 				{
@@ -14984,7 +14984,7 @@
 			"build": "1207"
 		},
 		"0xDF01B1F7A886B42D": {
-			"name": "_PARSEDATA_RQ_GET_NUM_NODES",
+			"name": "_PARSEDDATA_RQ_GET_NUM_NODES",
 			"comment": "",
 			"params": [
 				{
@@ -15012,7 +15012,7 @@
 			"build": "1207"
 		},
 		"0x6BEB168D5195E7AB": {
-			"name": "_PARSEDATA_GET_NUM_CHILDREN",
+			"name": "_PARSEDDATA_GET_NUM_CHILDREN",
 			"comment": "",
 			"params": [
 				{
@@ -28827,15 +28827,15 @@
 	},
 	"HUD": {
 		"0x26F6BBEA2CE3E3DC": {
-			"name": "_ENABLE_REDUCED_TIME_SCALE_WHILE_MENU_IS_OPEN",
-			"comment": "Enables time scale to be reduced while menus such as weapon wheel are open.",
+			"name": "_ENABLE_REDUCED_MENU_TIME_SCALE",
+			"comment": "Enables reduced time scale while menus such as weapon wheel and satchel are open.",
 			"params": [],
 			"return_type": "void",
 			"build": "1207"
 		},
 		"0xC5C7A2F6567FCCBC": {
-			"name": "_DISABLE_REDUCED_TIME_SCALE_WHILE_MENU_IS_OPEN",
-			"comment": "Disables time scale being reduced while menus such as weapon wheel are open.",
+			"name": "_DISABLE_REDUCED_MENU_TIME_SCALE",
+			"comment": "Disables reduced time scale while menus such as weapon wheel and satchel are open.",
 			"params": [],
 			"return_type": "void",
 			"build": "1207"
@@ -57594,7 +57594,7 @@
 			"build": "1207"
 		},
 		"0x4907D0E4FB26EE65": {
-			"name": "_0x4907D0E4FB26EE65",
+			"name": "_SIMULATED_ROUTE_DELETE",
 			"comment": "",
 			"params": [
 				{
@@ -57606,7 +57606,7 @@
 			"build": "1207"
 		},
 		"0x65A8196B8D7F5E0B": {
-			"name": "_0x65A8196B8D7F5E0B",
+			"name": "_SIMULATED_ROUTE_EXISTS",
 			"comment": "",
 			"params": [
 				{
@@ -57614,7 +57614,7 @@
 					"name": "p0"
 				}
 			],
-			"return_type": "Any",
+			"return_type": "BOOL",
 			"build": "1207"
 		},
 		"0x240915043CB799D7": {
