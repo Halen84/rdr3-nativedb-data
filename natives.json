@@ -26426,6 +26426,10 @@
 					"name": "sideZ"
 				},
 				{
+					"type": "Any",
+					"name": "p10"
+				},
+				{
 					"type": "float",
 					"name": "width"
 				},
@@ -26450,24 +26454,20 @@
 					"name": "colA"
 				},
 				{
-					"type": "Any",
-					"name": "p16"
+					"type": "float",
+					"name": "life"
 				},
 				{
-					"type": "Any",
-					"name": "p17"
+					"type": "BOOL",
+					"name": "isLongRange"
 				},
 				{
-					"type": "Any",
-					"name": "p18"
+					"type": "BOOL",
+					"name": "isDynamic"
 				},
 				{
-					"type": "Any",
-					"name": "p19"
-				},
-				{
-					"type": "Any",
-					"name": "p20"
+					"type": "BOOL",
+					"name": "useComplexColn"
 				},
 				{
 					"type": "Any",
