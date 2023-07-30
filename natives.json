@@ -66800,7 +66800,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "bAllowGestureAnims"
+					"name": "p1"
 				},
 				{
 					"type": "Any",
@@ -95230,7 +95230,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "UseLongRangeVehiclePathing"
+					"name": "p6"
 				},
 				{
 					"type": "int",
@@ -95276,7 +95276,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "UseLongRangeVehiclePathing"
+					"name": "p6"
 				},
 				{
 					"type": "int",
@@ -95338,7 +95338,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "UseLongRangeVehiclePathing"
+					"name": "p6"
 				},
 				{
 					"type": "int",
@@ -95509,7 +95509,7 @@
 					"name": "p15"
 				},
 				{
-					"type": "int",
+					"type": "BOOL",
 					"name": "p16"
 				}
 			],
